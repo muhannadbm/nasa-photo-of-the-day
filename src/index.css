@@ -7,6 +7,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.myimg {
+  max-width: 40%;
+max-height: 20%;
+}
+.top ul { 
+  display: flex;
+justify-content: space-evenly;
+width: 50%;
+margin: auto;
+}
+.top li {
+  list-style-type: none;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
