@@ -6,7 +6,23 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.header li{
 
+}
+.myimg {
+  max-width: 40%;
+max-height: 20%;
+}
+.top {
+  height: 30vh;
+background-color: skyblue;
+}
+.bottom ul { 
+  display: flex;
+justify-content: space-evenly;
+width: 50%;
+margin: auto;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

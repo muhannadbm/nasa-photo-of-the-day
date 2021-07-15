@@ -1,13 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
+import "./Components/Header"
+import Header from "./Components/Header";
+import axios from 'axios'
+import Body from './Components/Body'
+
+
+
 
 function App() {
+  const [data,setData] = useState(null)
+
+
+
+
+  useEffect(() => {
+    console.log('inside effect')
+    axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&count=5').then( res=> { 
+
+      setData(res.data)
+    }
+    )
+      .catch(err => console.log(err))
+  }, [])
+
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <Header/>
+
+      <Body bodydata = {data ? data : [{date: 'None' , explanation: 'None' , hdurl: 'None', title: 'None'}] } />
     </div>
   );
 }
