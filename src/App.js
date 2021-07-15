@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     console.log('inside effect')
-    axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&count=5').then( res=> { 
+    axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY').then( res=> { 
 
       setData(res.data)
     }
